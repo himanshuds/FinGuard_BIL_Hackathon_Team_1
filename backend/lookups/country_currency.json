@@ -1,0 +1,22 @@
+{
+  "country_to_currency": {
+    "Netherlands": "EUR",
+    "United States": "USD",
+    "Spain": "EUR",
+    "Luxembourg": "EUR",
+    "Italy": "EUR",
+    "Sweden": "SEK",
+    "United Kingdom": "GBP",
+    "France": "EUR",
+    "Belgium": "EUR",
+    "Finland": "EUR",
+    "Portugal": "EUR",
+    "Poland": "PLN",
+    "Germany": "EUR",
+    "Canada": "CAD",
+    "Switzerland": "CHF",
+    "Ireland": "EUR",
+    "Japan": "JPY",
+    "Austria": "EUR"
+  }
+}
