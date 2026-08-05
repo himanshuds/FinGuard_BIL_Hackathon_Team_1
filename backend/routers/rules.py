@@ -56,11 +56,15 @@ def evaluate_loan_above_threshold(
         "loan/loan_above_threshold",
         payload,
     )
+    remediation = ""
+    if not rule_status['result']:
+        remediation = f"Remove this loan from report"
     message = "passed" if rule_status['result'] else "Loan value should be at least 25,000 EUR"
     return RuleResult(
         rule_name="loan/loan_above_threshold",
         passed=rule_status['result'],
-        message=message)
+        message=message,
+        remediation=remediation)
 
 
 
@@ -80,6 +84,7 @@ def loan_currency_check(
     country_to_currency = load_json_as_dict('./lookups/country_currency.json').get('country_to_currency', {})
     #logger.debug(f"Country to currency mapping: {country_to_currency}")
     rule_status = {"result": False}
+    remediation = ""
     if company_data is None:
         message = "Please check company name"    
     else:
@@ -96,12 +101,15 @@ def loan_currency_check(
                 rule_name,
                 payload
         )
-        message = "passed" if rule_status['result'] else f"Convert loan value to {country_to_currency.get(country)}"
-
+        message = "passed" if rule_status['result'] else "failed"
+        
+        if not rule_status['result']:
+            remediation = f"Convert loan value to {country_to_currency.get(country)}"
     return {
         "rule_name": rule_name,
         "passed": rule_status["result"],
-        "message": message
+        "message": message,
+        "remediation": remediation
     }
 
 
