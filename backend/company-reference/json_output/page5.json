@@ -1,0 +1,24 @@
+{
+  "company_id": "C001",
+  "company_name": "Yarrow Auto Parts",
+  "hq_country": "Germany",
+  "industry": "Pharmaceuticals",
+  "pledgeable_assets": [
+    {
+      "asset": "Stuttgart Freight Hub",
+      "value": 675069,
+      "currency": "EUR"
+    },
+    {
+      "asset": "Bremen Assembly Line Facility",
+      "value": 793292,
+      "currency": "EUR"
+    },
+    {
+      "asset": "Leipzig Assembly Line Facility",
+      "value": 854675,
+      "currency": "EUR"
+    }
+  ],
+  "related_entities": "The following entities may appear as the recorded owner of an asset pledged by Yarrow Auto Parts: Yarrow Auto Parts."
+}
